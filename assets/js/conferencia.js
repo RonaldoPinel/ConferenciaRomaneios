@@ -197,7 +197,7 @@ async function abrirConferencia(idRomaneio) {
     }
 
     const nfes   = Object.values(lancamentos).filter(n => n && typeof n === 'object');
-    const chaves = nfes.map(n => n.chavenfe).filter(c => c && String(c).replace(/\D/g, '').length === 44);
+    const chaves = nfes.map(n => n.nfe).filter(c => c && String(c).replace(/\D/g, '').length === 44);
 
     if (!chaves.length) {
       setCorpo('<div class="vazio" style="text-align:center;padding:40px 0">Nenhuma chave de NF-e válida encontrada.</div>');
